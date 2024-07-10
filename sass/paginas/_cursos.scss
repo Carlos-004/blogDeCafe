@@ -1,0 +1,42 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.cursos{
+    .centrar-texto{
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .curso{
+        @include m.gridFr(1fr,3fr,20px);
+        margin-top: 40px;
+
+        @include m.telefono{
+            display: flex;
+            flex-direction: column;
+        }
+
+        &:nth-child(2),
+        &:nth-child(3){
+            border-bottom: solid 1px v.$gris;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .curso__informacion{
+            .curso__title{
+                margin-bottom: 20px;
+            }
+
+            .curso__label{
+                font-family: v.$fuenteHeading;
+                font-weight: bold;
+                margin-bottom: 20px;
+                
+                .curso__info{
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.footer{
+    background-color: v.$negro;
+    padding: 30px 0;
+    margin-top: 30px;
+
+    .barra{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include m.telefono{
+            flex-direction: column;
+        }
+        .logo{
+            .logo__title{
+                color: v.$blanco;
+                font-weight: 300;
+
+                .logo__bold{
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .navegacion{
+            .navegacion__link{
+                color: v.$blanco;
+                padding: 10px;
+            }
+        }
+    }
+}

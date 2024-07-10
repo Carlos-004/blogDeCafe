@@ -1,0 +1,53 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.contacto{
+    .centrar-texto{
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .contacto-bg{
+        background-image: url("../../img/contacto.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 300px;
+    }
+
+    .formulario{
+       
+        margin-top: -40px;
+        padding:0 20px;
+
+        .campo{
+            background-color: v.$blanco;
+            padding:0 20px;
+            .campo__label{
+                font-family: v.$fuenteHeading;
+                font-weight: bold;
+            }
+            .campo__field{
+                width: 100%;
+                padding: 10px;
+                border: solid 1px v.$gris;
+            }
+
+            .boton{
+                background-color: v.$negro;
+                color: v.$blanco;
+                padding: 10px;
+                border: none;
+                width: 200px;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: bold;
+                margin-top: 10px;
+                cursor: pointer;
+                @include m.telefono{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

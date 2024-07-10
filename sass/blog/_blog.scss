@@ -1,0 +1,96 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.contenido-principal{
+    margin-top: 30px;
+    @include m.gridFr(2fr ,1fr,20px);
+
+    @include m.telefono{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blog{
+        h3{
+            padding: 0 0 20px 0;
+        }
+    }
+
+    .entrada{
+        &:nth-child(2),
+        &:nth-child(3){
+            border-bottom: solid 1px v.$gris;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        .entrada__contenido{
+            padding: 10px;
+    
+            .entrada__title{
+                margin-bottom: 15px;
+            }
+            .boton{
+                display: block;
+                width: 200px;
+                text-align: center;
+                text-transform: uppercase;
+                background-color: v.$negro;
+                font-weight: bold;
+                color: v.$blanco;
+                padding: 10px;
+                margin-top: 20px;
+    
+                @include m.telefono{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .sidebar{
+        h3{
+            margin-bottom: 20px;
+        }
+    
+        .cursos .widget-curso{
+    
+                &:nth-child(1){
+                    border-bottom: solid 1px v.$gris;
+                    padding-bottom: 20px;
+                    margin-bottom: 20px;
+                }
+                list-style: none;
+        
+                .cursos__title{
+                    margin-bottom: 15px;
+                }
+                .widget-curso__label{
+                    font-family: v.$fuenteHeading;
+                    margin-bottom: 15px;
+                    font-weight: 900;
+        
+                    .widget-curso__info{
+                        font-weight: 300;
+                        font-weight: 12px;
+                    }
+                }
+        
+                .boton{
+                    display: block;
+                    width: 200px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    background-color: v.$cafe;
+                    padding: 10px;
+                    color: v.$blanco;
+        
+                    @include m.telefono{
+                        width: 100%;
+                    }
+                }
+            }
+    }
+}
+
+

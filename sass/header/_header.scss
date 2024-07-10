@@ -1,0 +1,60 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.header{
+    background-image: url("../../img/banner.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+
+    .header__container{
+        padding: 50px 0;
+
+        .barra{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @include m.telefono{
+                flex-direction: column;
+            }
+
+            .logo{
+                .logo__title{
+                    color: v.$blanco;
+                    font-weight: 300;
+
+                    span{
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        .header__text{
+            position: relative;
+            top: 230px;
+
+            @include m.telefono{
+                top: 100px;
+            }
+            .text_title,
+            .texto{
+                color: v.$blanco;
+                text-align: center;
+            }
+            .text_title{
+                margin-bottom: 40px;
+                @include m.telefono{
+                    font-size: 26px;
+                }
+            }
+            .texto{
+                @include m.telefono{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}

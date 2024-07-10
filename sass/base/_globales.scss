@@ -1,0 +1,39 @@
+@use "./variables" as v;
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: v.$fuenteParrafos;
+    font-size: 16px;
+    line-height: 2;
+}
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 95%;
+}
+a {
+    text-decoration: none;
+}
+h1, h2, h3, h4 {
+    font-family: v.$fuenteHeading;
+    line-height: 1.2;
+}
+h1 {
+    font-size: 48px;
+}
+h2 {
+    font-size: 40px;
+}
+h3 {
+    font-size: 32px;
+}
+h4 {
+    font-size: 28px;
+}
+img {
+    max-width: 100%;
+}
